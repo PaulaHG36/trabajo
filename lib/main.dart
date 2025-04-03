@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
         
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.blueGrey),
       ),
-      home: const MyHomePage(title: 'CHECK-LIST TRABAJOS DE MONTAJE'),
+      home: const MyHomePage(title: 'CHECK-LIST TRABAJOS DE MONTAJE',),
     );
   }
 }
@@ -83,6 +83,7 @@ class _MyHomePageState extends State<MyHomePage> {
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
         
         title: Text(
+          
           widget.title,
           style: const TextStyle(fontWeight: FontWeight.bold), // Negrita
         ),
@@ -90,6 +91,8 @@ class _MyHomePageState extends State<MyHomePage> {
       body: SingleChildScrollView(
         child: Column(
           children: <Widget>[
+
+            Image.asset('logo50.png', width: 100,height: 100,),
             const SizedBox(width: 15,height: 30,),
             Row(
               children: [
