@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_email_sender/flutter_email_sender.dart';
 
 void main() {
   runApp(const MyApp());
@@ -952,8 +953,14 @@ class _MyHomePageState extends State<MyHomePage> {
         height: 60,  // Ajusta la altura que desees
         margin: EdgeInsets.all(10), // Añadir márgenes si es necesario
         child: ElevatedButton(
-          onPressed: () {
-            // Acción
+          onPressed: () async {
+            final Email email = Email(
+              body: 'Aquí va el contenido de tu correo',
+              subject: 'Asunto del correo',
+              recipients: ['checklistmontaje@guillen_carpinteria.com'],
+              isHTML: false,
+            );
+            await FlutterEmailSender.send(email);
           },
           style: ElevatedButton.styleFrom(
             backgroundColor: const Color.fromARGB(255, 122, 192, 224),
