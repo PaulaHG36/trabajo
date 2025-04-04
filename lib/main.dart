@@ -33,6 +33,8 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+  Color _color = Color.fromARGB(155, 204, 204, 204);
+
   final TextEditingController _dateController = TextEditingController();
   final TextEditingController _dateController1 = TextEditingController();
   final TextEditingController _dateController2 = TextEditingController();
@@ -71,18 +73,21 @@ class _MyHomePageState extends State<MyHomePage> {
   final TextEditingController _dateController35 = TextEditingController();
   final TextEditingController _dateController36 = TextEditingController();
   final TextEditingController _dateController37 = TextEditingController();
-
+  final TextEditingController _dateController38 = TextEditingController();
+  final TextEditingController _dateController39 = TextEditingController();
+  final TextEditingController _dateController40 = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
     
     return Scaffold(
+      backgroundColor: _color,
+
       appBar: AppBar(
         
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
         
         title: Text(
-          
           widget.title,
           style: const TextStyle(fontWeight: FontWeight.bold), // Negrita
         ),
