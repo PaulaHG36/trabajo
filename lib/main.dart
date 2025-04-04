@@ -73,9 +73,6 @@ class _MyHomePageState extends State<MyHomePage> {
   final TextEditingController _dateController35 = TextEditingController();
   final TextEditingController _dateController36 = TextEditingController();
   final TextEditingController _dateController37 = TextEditingController();
-  final TextEditingController _dateController38 = TextEditingController();
-  final TextEditingController _dateController39 = TextEditingController();
-  final TextEditingController _dateController40 = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -950,13 +947,24 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       
       
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          //acción
-        },
-        child: const Text(
-          'Enviar',
-          style: TextStyle(fontSize: 20),
+      floatingActionButton: Container(
+        width: 200, // Esto hace que el botón ocupe todo el ancho disponible
+        height: 60,  // Ajusta la altura que desees
+        margin: EdgeInsets.all(10), // Añadir márgenes si es necesario
+        child: ElevatedButton(
+          onPressed: () {
+            // Acción
+          },
+          style: ElevatedButton.styleFrom(
+            backgroundColor: const Color.fromARGB(255, 122, 192, 224),
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(10), // Bordes redondeados
+            ),
+          ),
+          child: const Text(
+            'Enviar',
+            style: TextStyle(fontWeight: FontWeight.bold,fontSize: 20, color: Colors.black,),
+          ),
         ),
       ),
     );
