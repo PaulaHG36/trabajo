@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       theme: ThemeData(
         
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.blueGrey),
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.grey),
       ),
       home: const MyHomePage(title: 'CHECK-LIST TRABAJOS DE MONTAJE',),
     );
@@ -33,7 +33,6 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-//  int _counter = 0;
   final TextEditingController _dateController = TextEditingController();
   final TextEditingController _dateController1 = TextEditingController();
   final TextEditingController _dateController2 = TextEditingController();
@@ -91,105 +90,132 @@ class _MyHomePageState extends State<MyHomePage> {
       body: SingleChildScrollView(
         child: Column(
           children: <Widget>[
-
-            Image.asset('logo50.png', width: 100,height: 100,),
-            const SizedBox(width: 15,height: 30,),
             Row(
-              children: [
-                const Text('Fecha:'),
-                const SizedBox(width: 10,),
-                SizedBox(
-                  width: 200,
-                  child: TextField(
-                    controller: _dateController,
-                    decoration: const InputDecoration(
-                      labelText: 'Ingrese una fecha',
-                      border: OutlineInputBorder(),
-                    ),
-                  ),
-                ),
-              ],
-            ),
-            const SizedBox(width: 15,),
-            Row(
-              //mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                const Text('Obra:'),
-                const SizedBox(width: 19),
-                SizedBox(
-                  width: 400,
-                  child: TextField(
-                    controller: _dateController1,
-                    decoration: const InputDecoration(
-                      labelText: 'Escribe la obra',
-                      border: OutlineInputBorder(),
-                    ),
-                  ),
-                ),
-              ],
-            ),
-            const SizedBox(width: 15, height: 30,),
-            Row(
-              children: [
-                Flexible(child: Table(
-                    //border: TableBorder.all(), // Establece el borde de la tabla
-                    
-                    columnWidths: {
-                      0: FractionColumnWidth(0.26), // Ancho relativo de la primera columna
-                      1: FractionColumnWidth(0.07), // Ancho relativo de la segunda columna
-                      2: FractionColumnWidth(0.07),
-                      3: FractionColumnWidth(0.6),
-                    },
+            children: [
+              Flexible(
+              child: Table(
+              
+                columnWidths: {
+                  0: FractionColumnWidth(0.26), // Ancho relativo de la primera columna
+                  1: FractionColumnWidth(0.27), // Ancho relativo de la segunda columna
+                  2: FractionColumnWidth(0.27), // Ancho relativo de la segunda columna
+                },
+                children: [
+                  TableRow(
                     children: [
-                      TableRow(
-                        children: [
-                          SizedBox(
-                            width: 500,
-                            /*child: TextField(
-                              decoration: const InputDecoration(
-                                fillColor: Colors.transparent,
-                              ),
-                            ),*/
-                          ),
-                          Container(
-                            //padding: EdgeInsets.all(8),
-                            decoration: BoxDecoration(
-                              border: Border.all(color: Colors.black)
+                      Container(
+                            child: Image.asset('logo50.png', width: 180, height: 180,),
                             ),
-                            child: Text(
-                              'SI',
-                              style: TextStyle(fontWeight: FontWeight.bold),
-                            ),
-                          ),
-                          Container(
-                            //padding: EdgeInsets.all(8),
-                            decoration: BoxDecoration(
-                              border: Border.all(color: Colors.black)
-                            ),
-                            child: Text(
-                              'NO',
-                              style: TextStyle(fontWeight: FontWeight.bold),
-                              softWrap: true, // Permite que el texto se envuelva automáticamente
-                            ),
-                          ),
                             Container(
-                            //padding: EdgeInsets.all(8),
-                            decoration: BoxDecoration(
-                              border: Border.all(color: Colors.black)
-                            ),
                             child: Text(
-                              'OBSERVACIONES',
-                              style: TextStyle(fontWeight: FontWeight.bold),
+                              'GUILLÉN',
+                              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 70),
                               softWrap: true, // Permite que el texto se envuelva automáticamente
                             ),
                           ),
-                        ],
-                      ), 
-                    ],
-                  ),
+                          Container(
+                            child: Text(
+                              'INDUSTRIAS DE LA MADERA S.L.',
+                              style: TextStyle( fontSize: 40),
+                              softWrap: true, // Permite que el texto se envuelva automáticamente
+                            ),
+                          ),
+                    ]
+                  )
+                ],
+                  
+              )
+            ),
+          ],
+        ),
+
+        const SizedBox(width: 15,height: 30,),
+        Row(
+          children: [
+            const Text('Fecha:'),
+            const SizedBox(width: 10,),
+            SizedBox(
+              width: 200,
+              child: TextField(
+                controller: _dateController,
+                decoration: const InputDecoration(
+                  labelText: 'Ingrese una fecha',
+                  border: OutlineInputBorder(),
                 ),
+              ),
+            ),
+          ],
+        ),
+          
+        const SizedBox(width: 15,),
+        Row(
+          children: [
+            const Text('Obra:'),
+            const SizedBox(width: 19),
+            SizedBox(
+              width: 400,
+              child: TextField(
+                controller: _dateController1,
+                decoration: const InputDecoration(
+                  labelText: 'Escribe la obra',
+                  border: OutlineInputBorder(),
+                ),
+              ),
+            ),
+          ],
+        ),
+        const SizedBox(width: 15, height: 30,),
+        Row(
+          children: [
+            Flexible(child: Table(             
+              columnWidths: {
+                0: FractionColumnWidth(0.26), // Ancho relativo de la primera columna
+                1: FractionColumnWidth(0.07), // Ancho relativo de la segunda columna
+                2: FractionColumnWidth(0.07),
+                3: FractionColumnWidth(0.6),
+              },
+              children: [
+                TableRow( 
+                  children: [
+                    SizedBox(
+                      width: 500,
+                    ),
+                    Container(
+                      decoration: BoxDecoration(
+                        border: Border.all(color: Colors.black)
+                      ),
+                      child: Text(
+                        'SI',
+                        style: TextStyle(fontWeight: FontWeight.bold),
+                      ),
+                    ),
+                    Container(
+                      decoration: BoxDecoration(
+                        border: Border.all(color: Colors.black)
+                      ),
+                      child: Text(
+                        'NO',
+                        style: TextStyle(fontWeight: FontWeight.bold),
+                        softWrap: true, // Permite que el texto se envuelva automáticamente
+                      ),
+                    ),
+                    Container(
+                      decoration: BoxDecoration(
+                        border: Border.all(color: Colors.black)
+                      ),
+                      child: Text(
+                        'OBSERVACIONES',
+                        style: TextStyle(fontWeight: FontWeight.bold),
+                        softWrap: true, // Permite que el texto se envuelva automáticamente
+                      ),
+                    ),
+                  ],
+                ), 
               ],
             ),
+            ),
+          ],
+        ),
             Row(
               children: [
                 SizedBox(
@@ -919,11 +945,15 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       
       
-      /*floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: const Icon(Icons.add),
-      ),*/ // This trailing comma makes auto-formatting nicer for build methods.
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          //acción
+        },
+        child: const Text(
+          'Enviar',
+          style: TextStyle(fontSize: 20),
+        ),
+      ),
     );
   }
 }
