@@ -34,45 +34,46 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  Color _color = Color.fromARGB(155, 204, 204, 204);
+  final Color _color = Color.fromARGB(155, 204, 204, 204);
 
   final TextEditingController _dateController = TextEditingController();
   final TextEditingController _dateController1 = TextEditingController();
-  final TextEditingController _dateController2 = TextEditingController();
-  final TextEditingController _dateController3 = TextEditingController();
-  final TextEditingController _dateController4 = TextEditingController();
-  final TextEditingController _dateController5 = TextEditingController();
-  final TextEditingController _dateController6 = TextEditingController();
+  bool _isOption1Selected = false;
+  bool _isOption2Selected = false;
+  bool _isOption3Selected = false;
+  bool _isOption4Selected = false;
+  bool _isOption5Selected = false;
+  bool _isOption6Selected = false;
+  bool _isOption7Selected = false;
+  bool _isOption8Selected = false;
+  bool _isOption9Selected = false;
+  bool _isOption10Selected = false;
+  bool _isOption11Selected = false;
+  bool _isOption12Selected = false;
+  bool _isOption13Selected = false;
+  bool _isOption14Selected = false;
+  bool _isOption15Selected = false;
+  bool _isOption16Selected = false;
+  bool _isOption17Selected = false;
+  bool _isOption18Selected = false;
+  bool _isOption19Selected = false;
+  bool _isOption20Selected = false;
+  bool _isOption21Selected = false;
+  bool _isOption22Selected = false;
+  bool _isOption23Selected = false;
+  bool _isOption24Selected = false;
+  bool _isOption25Selected = false;
+  bool _isOption26Selected = false;
   final TextEditingController _dateController7 = TextEditingController();
-  final TextEditingController _dateController8 = TextEditingController();
-  final TextEditingController _dateController9 = TextEditingController();
   final TextEditingController _dateController10 = TextEditingController();
-  final TextEditingController _dateController11 = TextEditingController();
-  final TextEditingController _dateController12 = TextEditingController();
   final TextEditingController _dateController13 = TextEditingController();
-  final TextEditingController _dateController14 = TextEditingController();
-  final TextEditingController _dateController15 = TextEditingController();
   final TextEditingController _dateController16 = TextEditingController();
-  final TextEditingController _dateController17 = TextEditingController();
-  final TextEditingController _dateController18 = TextEditingController();
   final TextEditingController _dateController19 = TextEditingController();
-  final TextEditingController _dateController20 = TextEditingController();
-  final TextEditingController _dateController21 = TextEditingController();
   final TextEditingController _dateController22 = TextEditingController();
-  final TextEditingController _dateController23 = TextEditingController();
-  final TextEditingController _dateController24 = TextEditingController();
   final TextEditingController _dateController25 = TextEditingController();
-  final TextEditingController _dateController26 = TextEditingController();
-  final TextEditingController _dateController27 = TextEditingController();
   final TextEditingController _dateController28 = TextEditingController();
-  final TextEditingController _dateController29 = TextEditingController();
-  final TextEditingController _dateController30 = TextEditingController();
   final TextEditingController _dateController31 = TextEditingController();
-  final TextEditingController _dateController32 = TextEditingController();
-  final TextEditingController _dateController33 = TextEditingController();
   final TextEditingController _dateController34 = TextEditingController();
-  final TextEditingController _dateController35 = TextEditingController();
-  final TextEditingController _dateController36 = TextEditingController();
   final TextEditingController _dateController37 = TextEditingController();
 
   @override
@@ -230,9 +231,10 @@ class _MyHomePageState extends State<MyHomePage> {
                   ),
               ],
             ),
-             Row(
+            Row(
               children: [
-                Flexible(child: Table(
+                Flexible(
+                  child: Table(
                     border: TableBorder.all(), // Establece el borde de la tabla
                     columnWidths: {
                       0: FractionColumnWidth(0.26), // Ancho relativo de la primera columna
@@ -244,46 +246,52 @@ class _MyHomePageState extends State<MyHomePage> {
                       TableRow(
                         children: [
                           Container(
-                             //padding: EdgeInsets.all(8),
+                            //padding: EdgeInsets.all(8),
                             child: Text(
                               'Vienen la carpintería según albarán',
                             ),
                           ),
-                            SizedBox(
-                              width: 500,
-                              child: TextField(
-                                controller: _dateController2,
-                                decoration: const InputDecoration(
-                                  border: OutlineInputBorder(),
-                                ),
+                          Row(
+                            children: [
+                              Checkbox(
+                                value: _isOption1Selected,
+                                onChanged: (bool? value) {
+                                  setState(() {
+                                    _isOption1Selected = value!;
+                                  });
+                                },
+                              ), 
+                            ],
+                          ),
+                          Row(
+                            children: [
+                              Checkbox(
+                                value: _isOption2Selected,
+                                onChanged: (bool? value) {
+                                  setState(() {
+                                    _isOption2Selected = value!;
+                                  });
+                                },
+                              ),
+                            ],
+                          ),
+                          SizedBox(
+                            width: 500,
+                            child: TextField(
+                              controller: _dateController1,  // Aún utilizamos el controlador para este campo
+                              decoration: const InputDecoration(
+                                border: OutlineInputBorder(),
                               ),
                             ),
-                            SizedBox(
-                              width: 500,
-                              child: TextField(
-                                controller: _dateController3,
-                                decoration: const InputDecoration(
-                                  border: OutlineInputBorder(),
-                                ),
-                              ),
-                            ),
-                            SizedBox(
-                              width: 500,
-                              child: TextField(
-                                controller: _dateController4,
-                                decoration: const InputDecoration(
-                                  border: OutlineInputBorder(),
-                                ),
-                              ),
-                            ),
+                          ),
                         ],
-                      ), 
+                      ),
                     ],
                   ),
-                )
+                ),
+              ],
+            ),
 
-              ]
-             ),
             Row(
               children: [
                 SizedBox(
@@ -314,24 +322,31 @@ class _MyHomePageState extends State<MyHomePage> {
                               'Correcta según cuadrante de Medición',
                             ),
                           ),
-                            SizedBox(
-                              width: 500,
-                              child: TextField(
-                                controller: _dateController5,
-                                decoration: const InputDecoration(
-                                  border: OutlineInputBorder(),
-                                ),
-                              ),
-                            ),
-                            SizedBox(
-                              width: 500,
-                              child: TextField(
-                                controller: _dateController6,
-                                decoration: const InputDecoration(
-                                  border: OutlineInputBorder(),
-                                ),
-                              ),
-                            ),
+                          Row(
+                            children: [
+                              Checkbox(
+                                value: _isOption3Selected,  // El valor que indica si está marcado o no
+                                onChanged: (bool? value) {
+                                  setState(() {
+                                    _isOption3Selected = value!;  // Alternamos el estado del checkbox
+                                  });
+                                },
+                              ),// Etiqueta del primer checkbox
+                            ],
+                          ),
+                          // Checkbox 2
+                          Row(
+                            children: [
+                              Checkbox(
+                                value: _isOption4Selected,  // El valor que indica si está marcado o no
+                                onChanged: (bool? value) {
+                                  setState(() {
+                                    _isOption4Selected = value!;  // Alternamos el estado del checkbox
+                                  });
+                                },
+                              ),// Etiqueta del segundo checkbox
+                            ],
+                          ),
                             SizedBox(
                               width: 500,
                               child: TextField(
@@ -378,24 +393,30 @@ class _MyHomePageState extends State<MyHomePage> {
                               'Montaje de Huecos de Entrada',
                             ),
                           ),
-                            SizedBox(
-                              width: 500,
-                              child: TextField(
-                                controller: _dateController8,
-                                decoration: const InputDecoration(
-                                  border: OutlineInputBorder(),
-                                ),
+                          Row(
+                            children: [
+                              Checkbox(
+                                value: _isOption5Selected,
+                                onChanged: (bool? value) {
+                                  setState(() {
+                                    _isOption5Selected = value!;
+                                  });
+                                },
+                              ), 
+                            ],
+                          ),
+                          Row(
+                            children: [
+                              Checkbox(
+                                value: _isOption6Selected,
+                                onChanged: (bool? value) {
+                                  setState(() {
+                                    _isOption6Selected = value!;
+                                  });
+                                },
                               ),
-                            ),
-                            SizedBox(
-                              width: 500,
-                              child: TextField(
-                                controller: _dateController9,
-                                decoration: const InputDecoration(
-                                  border: OutlineInputBorder(),
-                                ),
-                              ),
-                            ),
+                            ],
+                          ),
                             SizedBox(
                               width: 500,
                               child: TextField(
@@ -431,24 +452,30 @@ class _MyHomePageState extends State<MyHomePage> {
                               'Ajuste de Holguras Huecos de Entrada',
                             ),
                           ),
-                            SizedBox(
-                              width: 500,
-                              child: TextField(
-                                controller: _dateController11,
-                                decoration: const InputDecoration(
-                                  border: OutlineInputBorder(),
-                                ),
+                          Row(
+                            children: [
+                              Checkbox(
+                                value: _isOption7Selected,
+                                onChanged: (bool? value) {
+                                  setState(() {
+                                    _isOption7Selected = value!;
+                                  });
+                                },
+                              ), 
+                            ],
+                          ),
+                          Row(
+                            children: [
+                              Checkbox(
+                                value: _isOption8Selected,
+                                onChanged: (bool? value) {
+                                  setState(() {
+                                    _isOption8Selected = value!;
+                                  });
+                                },
                               ),
-                            ),
-                            SizedBox(
-                              width: 500,
-                              child: TextField(
-                                controller: _dateController12,
-                                decoration: const InputDecoration(
-                                  border: OutlineInputBorder(),
-                                ),
-                              ),
-                            ),
+                            ],
+                          ),
                             SizedBox(
                               width: 500,
                               child: TextField(
@@ -484,24 +511,30 @@ class _MyHomePageState extends State<MyHomePage> {
                               'Montaje de Huecos de Paso',
                             ),
                           ),
-                            SizedBox(
-                              width: 500,
-                              child: TextField(
-                                controller: _dateController14,
-                                decoration: const InputDecoration(
-                                  border: OutlineInputBorder(),
-                                ),
+                          Row(
+                            children: [
+                              Checkbox(
+                                value: _isOption9Selected,
+                                onChanged: (bool? value) {
+                                  setState(() {
+                                    _isOption9Selected = value!;
+                                  });
+                                },
+                              ), 
+                            ],
+                          ),
+                          Row(
+                            children: [
+                              Checkbox(
+                                value: _isOption10Selected,
+                                onChanged: (bool? value) {
+                                  setState(() {
+                                    _isOption10Selected = value!;
+                                  });
+                                },
                               ),
-                            ),
-                            SizedBox(
-                              width: 500,
-                              child: TextField(
-                                controller: _dateController15,
-                                decoration: const InputDecoration(
-                                  border: OutlineInputBorder(),
-                                ),
-                              ),
-                            ),
+                            ],
+                          ),
                             SizedBox(
                               width: 500,
                               child: TextField(
@@ -537,24 +570,30 @@ class _MyHomePageState extends State<MyHomePage> {
                               'Ajuste Holguras Huecos de Paso',
                             ),
                           ),
-                            SizedBox(
-                              width: 500,
-                              child: TextField(
-                                controller: _dateController17,
-                                decoration: const InputDecoration(
-                                  border: OutlineInputBorder(),
-                                ),
+                          Row(
+                            children: [
+                              Checkbox(
+                                value: _isOption11Selected,
+                                onChanged: (bool? value) {
+                                  setState(() {
+                                    _isOption11Selected = value!;
+                                  });
+                                },
+                              ), 
+                            ],
+                          ),
+                          Row(
+                            children: [
+                              Checkbox(
+                                value: _isOption12Selected,
+                                onChanged: (bool? value) {
+                                  setState(() {
+                                    _isOption12Selected = value!;
+                                  });
+                                },
                               ),
-                            ),
-                            SizedBox(
-                              width: 500,
-                              child: TextField(
-                                controller: _dateController18,
-                                decoration: const InputDecoration(
-                                  border: OutlineInputBorder(),
-                                ),
-                              ),
-                            ),
+                            ],
+                          ),
                             SizedBox(
                               width: 500,
                               child: TextField(
@@ -590,24 +629,30 @@ class _MyHomePageState extends State<MyHomePage> {
                               'Montaje de Modulo de Armarios',
                             ),
                           ),
-                            SizedBox(
-                              width: 500,
-                              child: TextField(
-                                controller: _dateController20,
-                                decoration: const InputDecoration(
-                                  border: OutlineInputBorder(),
-                                ),
+                          Row(
+                            children: [
+                              Checkbox(
+                                value: _isOption13Selected,
+                                onChanged: (bool? value) {
+                                  setState(() {
+                                    _isOption13Selected = value!;
+                                  });
+                                },
+                              ), 
+                            ],
+                          ),
+                          Row(
+                            children: [
+                              Checkbox(
+                                value: _isOption14Selected,
+                                onChanged: (bool? value) {
+                                  setState(() {
+                                    _isOption14Selected = value!;
+                                  });
+                                },
                               ),
-                            ),
-                            SizedBox(
-                              width: 500,
-                              child: TextField(
-                                controller: _dateController21,
-                                decoration: const InputDecoration(
-                                  border: OutlineInputBorder(),
-                                ),
-                              ),
-                            ),
+                            ],
+                          ),
                             SizedBox(
                               width: 500,
                               child: TextField(
@@ -643,24 +688,30 @@ class _MyHomePageState extends State<MyHomePage> {
                               'Ajuste Holguras Huecos de Armarios',
                             ),
                           ),
-                            SizedBox(
-                              width: 500,
-                              child: TextField(
-                                controller: _dateController23,
-                                decoration: const InputDecoration(
-                                  border: OutlineInputBorder(),
-                                ),
+                          Row(
+                            children: [
+                              Checkbox(
+                                value: _isOption15Selected,
+                                onChanged: (bool? value) {
+                                  setState(() {
+                                    _isOption15Selected = value!;
+                                  });
+                                },
+                              ), 
+                            ],
+                          ),
+                          Row(
+                            children: [
+                              Checkbox(
+                                value: _isOption16Selected,
+                                onChanged: (bool? value) {
+                                  setState(() {
+                                    _isOption16Selected = value!;
+                                  });
+                                },
                               ),
-                            ),
-                            SizedBox(
-                              width: 500,
-                              child: TextField(
-                                controller: _dateController24,
-                                decoration: const InputDecoration(
-                                  border: OutlineInputBorder(),
-                                ),
-                              ),
-                            ),
+                            ],
+                          ),
                             SizedBox(
                               width: 500,
                               child: TextField(
@@ -696,24 +747,30 @@ class _MyHomePageState extends State<MyHomePage> {
                               'Montaje de Tapajuntas',
                             ),
                           ),
-                            SizedBox(
-                              width: 500,
-                              child: TextField(
-                                controller: _dateController26,
-                                decoration: const InputDecoration(
-                                  border: OutlineInputBorder(),
-                                ),
+                          Row(
+                            children: [
+                              Checkbox(
+                                value: _isOption17Selected,
+                                onChanged: (bool? value) {
+                                  setState(() {
+                                    _isOption17Selected = value!;
+                                  });
+                                },
+                              ), 
+                            ],
+                          ),
+                          Row(
+                            children: [
+                              Checkbox(
+                                value: _isOption18Selected,
+                                onChanged: (bool? value) {
+                                  setState(() {
+                                    _isOption18Selected = value!;
+                                  });
+                                },
                               ),
-                            ),
-                            SizedBox(
-                              width: 500,
-                              child: TextField(
-                                controller: _dateController27,
-                                decoration: const InputDecoration(
-                                  border: OutlineInputBorder(),
-                                ),
-                              ),
-                            ),
+                            ],
+                          ),
                             SizedBox(
                               width: 500,
                               child: TextField(
@@ -749,24 +806,30 @@ class _MyHomePageState extends State<MyHomePage> {
                               'Montaje de Rodapies',
                             ),
                           ),
-                            SizedBox(
-                              width: 500,
-                              child: TextField(
-                                controller: _dateController29,
-                                decoration: const InputDecoration(
-                                  border: OutlineInputBorder(),
-                                ),
+                          Row(
+                            children: [
+                              Checkbox(
+                                value: _isOption19Selected,
+                                onChanged: (bool? value) {
+                                  setState(() {
+                                    _isOption19Selected = value!;
+                                  });
+                                },
+                              ), 
+                            ],
+                          ),
+                          Row(
+                            children: [
+                              Checkbox(
+                                value: _isOption20Selected,
+                                onChanged: (bool? value) {
+                                  setState(() {
+                                    _isOption20Selected = value!;
+                                  });
+                                },
                               ),
-                            ),
-                            SizedBox(
-                              width: 500,
-                              child: TextField(
-                                controller: _dateController30,
-                                decoration: const InputDecoration(
-                                  border: OutlineInputBorder(),
-                                ),
-                              ),
-                            ),
+                            ],
+                          ),
                             SizedBox(
                               width: 500,
                               child: TextField(
@@ -802,24 +865,30 @@ class _MyHomePageState extends State<MyHomePage> {
                               'Montaje de Carpintería Especifica',
                             ),
                           ),
-                            SizedBox(
-                              width: 500,
-                              child: TextField(
-                                controller: _dateController32,
-                                decoration: const InputDecoration(
-                                  border: OutlineInputBorder(),
-                                ),
+                          Row(
+                            children: [
+                              Checkbox(
+                                value: _isOption21Selected,
+                                onChanged: (bool? value) {
+                                  setState(() {
+                                    _isOption21Selected = value!;
+                                  });
+                                },
+                              ), 
+                            ],
+                          ),
+                          Row(
+                            children: [
+                              Checkbox(
+                                value: _isOption22Selected,
+                                onChanged: (bool? value) {
+                                  setState(() {
+                                    _isOption22Selected = value!;
+                                  });
+                                },
                               ),
-                            ),
-                            SizedBox(
-                              width: 500,
-                              child: TextField(
-                                controller: _dateController33,
-                                decoration: const InputDecoration(
-                                  border: OutlineInputBorder(),
-                                ),
-                              ),
-                            ),
+                            ],
+                          ),
                             SizedBox(
                               width: 500,
                               child: TextField(
@@ -855,24 +924,30 @@ class _MyHomePageState extends State<MyHomePage> {
                               'Revisión de elementos complementarios (barras ...)',
                             ),
                           ),
-                            SizedBox(
-                              width: 500,
-                              child: TextField(
-                                controller: _dateController35,
-                                decoration: const InputDecoration(
-                                  border: OutlineInputBorder(),
-                                ),
+                          Row(
+                            children: [
+                              Checkbox(
+                                value: _isOption23Selected,
+                                onChanged: (bool? value) {
+                                  setState(() {
+                                    _isOption23Selected = value!;
+                                  });
+                                },
+                              ), 
+                            ],
+                          ),
+                          Row(
+                            children: [
+                              Checkbox(
+                                value: _isOption24Selected,
+                                onChanged: (bool? value) {
+                                  setState(() {
+                                    _isOption24Selected = value!;
+                                  });
+                                },
                               ),
-                            ),
-                            SizedBox(
-                              width: 500,
-                              child: TextField(
-                                controller: _dateController36,
-                                decoration: const InputDecoration(
-                                  border: OutlineInputBorder(),
-                                ),
-                              ),
-                            ),
+                            ],
+                          ),
                             SizedBox(
                               width: 500,
                               child: TextField(
@@ -908,24 +983,30 @@ class _MyHomePageState extends State<MyHomePage> {
                               'Repasos piezas de carpintería (emplastecido ...)',
                             ),
                           ),
-                            SizedBox(
-                              width: 500,
-                              child: TextField(
-                                controller: _dateController35,
-                                decoration: const InputDecoration(
-                                  border: OutlineInputBorder(),
-                                ),
+                          Row(
+                            children: [
+                              Checkbox(
+                                value: _isOption25Selected,
+                                onChanged: (bool? value) {
+                                  setState(() {
+                                    _isOption25Selected = value!;
+                                  });
+                                },
+                              ), 
+                            ],
+                          ),
+                          Row(
+                            children: [
+                              Checkbox(
+                                value: _isOption26Selected,
+                                onChanged: (bool? value) {
+                                  setState(() {
+                                    _isOption26Selected = value!;
+                                  });
+                                },
                               ),
-                            ),
-                            SizedBox(
-                              width: 500,
-                              child: TextField(
-                                controller: _dateController36,
-                                decoration: const InputDecoration(
-                                  border: OutlineInputBorder(),
-                                ),
-                              ),
-                            ),
+                            ],
+                          ),
                             SizedBox(
                               width: 500,
                               child: TextField(
@@ -957,7 +1038,7 @@ class _MyHomePageState extends State<MyHomePage> {
             final Email email = Email(
               body: 'Aquí va el contenido de tu correo',
               subject: 'Asunto del correo',
-              recipients: ['checklistmontaje@guillen_carpinteria.com'],
+              recipients: ['paula_hanxi_garcia_m-tsapp1ma2324@cev.com'],
               isHTML: false,
             );
             await FlutterEmailSender.send(email);
